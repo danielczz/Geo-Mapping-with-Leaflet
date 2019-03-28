@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Geo JSON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Earthquakes for last Week</title>
 
   <!-- Leaflet CSS & JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -17,11 +19,49 @@
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
+
+  <!-- Navigation bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand abs" href="index.html">Geo-Mapping Earthquakes with Leaflet for last week</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/danielczz/Geo-Mapping-with-Leaflet">Github repository</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
   <!-- The div where we will inject our map -->
   <div id="map"></div>
+
+  
+  <!-- Footer -->
+<div class="card fixed-bottom">
+  <div class="card-body">
+
+    <div class="footer-copyright text-center py-3">© 2019 Data analysis:
+          <a href="https://github.com/danielczz/"class="btn btn-primary"> Powered by Daniel Céspedes</a>
+      </div>
+    
+  </div>
+</div>
+
 
   <!-- API key -->
   <script type="text/javascript" src="static/js/config.js"></script>

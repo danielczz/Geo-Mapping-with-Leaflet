@@ -10,3 +10,53 @@ body,
 html {
   height: 100%;
 }
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  }
+  .legend {
+  background-color: “black”;
+  line-height: 25px;
+  color: #555;
+  width: auto;
+  }
+  .legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+  }
+
+  .container-fluid > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.p {
+    width:50%; f
+    loat: right; 
+    margin: 25 px;
+}
+
+.perz_img {
+  width:50%; float: left; margin: 25 px;
+  
+}
+
+@media (max-width: 480px) {
+.perz_img {
+  width: 100%;
+  display:block;
+  overflow-x: auto;
+  overflow-y: auto;
+  }
+
+.p {
+    width:90%;
+}

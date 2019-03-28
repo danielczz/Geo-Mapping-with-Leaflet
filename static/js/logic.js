@@ -1,10 +1,10 @@
 function getColor(color) {
-  return color <= 1 ? '#2dc937' :
-    color <= 2 ? '#99c140' :
-    color <= 3 ? '#e7b416' :
-    color <= 4 ? '#db7b2b' :
-    color <= 5 ? '#cc3232' :
-    '#cc3232' ;
+  return color <= 1 ? '#FFFFFF' :
+    color <= 2 ? '#99CCFF' :
+    color <= 3 ? '#33FF99' :
+    color <= 4 ? '#FF9933' :
+    color <= 5 ? '#FF0000' :
+    '#660000' ;
 }
 // All Hour
 // var queryUrl_EQ = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
@@ -80,24 +80,39 @@ function createMap(earthquakes) {
 
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
-    Earthquakes: earthquakes
+    "Earthquakes by magnitude": earthquakes
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
   var myMap = L.map("map", {
     center: [
-      37.09, -95.71
+      29.09, -95.71
     ],
-    zoom: 5,
+    zoom: 3.5,
     layers: [streetmap, earthquakes]
   });
+
+  var legend = L.control({position: 'topright'});
+
+  legend.onAdd = function (map) { 
+    // var div = L.DomUtil.create('div', 'info legend'), grades = [0,500,5000,10000,80000,200000,5000000];
+
+    var div = L.DomUtil.create('div', 'info legend'), grades = [1,2,3,4,5,6];
+
+    for (var i = 0; i < grades.length; i++) {
+      div.innerHTML += '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      }
+      return div;
+      }
+      legend.addTo(myMap);
 
   // Create a layer control
   // Pass in our baseMaps and overlayMaps
   // Add the layer control to the map
-  L.control.layers(baseMaps, overlayMaps, {
+  L.control.layers(overlayMaps, baseMaps, {
     collapsed: false
   }).addTo(myMap);
   
 }
+
 
