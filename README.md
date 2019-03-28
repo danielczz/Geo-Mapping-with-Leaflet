@@ -5,7 +5,7 @@
 
 ## Project Outline
 
-![Landing page](static/Images/earthquake-2.jpg)
+![Landing page](static/images/earthquake-2.jpg)
 
 In this project we are going to analyze data generated for the **Earthquakes detected around the world for the last Week**. The data is provided on real time by _USGS - United States Geological Survey_. 
 
@@ -40,7 +40,7 @@ This is a brief sample extraction of the JavaScript code. Find the complete code
 ### **Data gathering**
 - Data provided for the analysis on JSON representation from USGS:
 
-![Landing page](static/Images/JSON.png)
+![Landing page](static/images/JSON.png)
 
 
 
