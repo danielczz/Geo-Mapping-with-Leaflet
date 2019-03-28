@@ -35,8 +35,6 @@ We will provide useful actionable insigths about the Earthquakes and his locatio
 
 ## Data Analysis Framework
 
-This is a brief sample extraction of the JavaScript code. Find the complete code available here: [_logic.js_](static/js/logic.js)
-
 ### **Data gathering**
 - Data provided for the analysis on JSON representation from USGS:
 
@@ -45,6 +43,8 @@ This is a brief sample extraction of the JavaScript code. Find the complete code
 
 
 ### **Data analysis**
+
+This is a brief sample extraction of the JavaScript code. Find the complete code available here: [_logic.js_](static/js/logic.js)
 
 - Retrieve JSON representation data: 
 
