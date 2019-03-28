@@ -304,4 +304,4 @@ function buildCharts(sample) {
 ### **Data sharing**
 ### Screencapture of the final application: 
 
-![Screencapture](static/Images/screen.png)
+![Screencapture](static/images/screen.png)
